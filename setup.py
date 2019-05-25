@@ -43,7 +43,7 @@ elif sys.version_info[0] == 3:
 else:
     raise NotImplementedError("Python version unsupported %r" % sys.version)
 
-sys.path.append(os.path.abspath(source_dir))
+sys.path.insert(1, os.path.abspath(source_dir))
 
 # Now that we have modified sys.path, these imports will pull in either the py3
 # version or the py2 version.
